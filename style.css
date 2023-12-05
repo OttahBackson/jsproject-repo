@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #284e95;
+}
+.box{
+    width: fit-content;
+    height: 100vh;
+    background: #fff;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    opacity: 0;
+    left: -500px;
+    pointer-events: none;
+    transition: .3s;
+}
+.active.box{
+    opacity: 1;
+    left: 0px;
+    pointer-events: fill;
+}
+.menu-icon-box{
+    width: fit-content;
+    height: auto;
+    z-index: 2;
+    background: #fff;
+    margin: 30px;
+    position: absolute;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.line1, .line2, .line3{
+    width: 40px;
+    height: 4px;
+    margin: 10px 8px;
+    background: #202020;
+    border-radius: 50px;
+    transition: .2s;
+}
+.active .line1{
+    transform: translate(0px, 15px) rotate(45deg);
+}
+.active .line2{
+    opacity: 0;
+    /* transform: translate(0px, 15px) rotate(45deg); */
+}
+
+.active .line3{
+    transform: translate(0px, -15px) rotate(-45deg);
+}
+
+
+nav{
+    padding-top: 100px;
+}
+nav ul{
+    margin: 0px 30px;
+}
+nav ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+nav ul li:hover{
+    background: #c6c6c66f;
+    border-radius: 8px;
+}
+nav ul li a{
+    padding: 10px 30px;
+    display: block;
+    font-size: 28px;
+    text-decoration: none;
+    color: #000;
+    
+}
